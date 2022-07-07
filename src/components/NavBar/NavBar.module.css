@@ -1,0 +1,39 @@
+.bar{
+    background-color: red;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bar ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.bar li{
+    background-color: tomato;
+    margin-right: 3px;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 650;
+    border-radius: 5px;
+}
+
+.bar p{
+    color: white; 
+    text-decoration: underline tomato;
+    margin: 0;
+    padding: 0;
+}
+
+.bar li :hover{
+   background-color: red;
+   border-radius: 5px;
+   text-decoration: underline red;
+}

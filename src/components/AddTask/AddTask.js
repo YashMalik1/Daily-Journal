@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import classes from './AddTask.module.css'
 
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('')
@@ -21,8 +22,8 @@ const AddTask = ({ onAdd }) => {
   }
 
   return (
-    <form className='add-form' onSubmit={onSubmit}>
-      <div className='form-control'>
+    <form className={classes.add} onSubmit={onSubmit}>
+      <div className={classes.form}>
         <label>Task</label>
         <input
           type='text'
@@ -31,7 +32,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(e) => setText(e.target.value)}
         />
       </div>
-      <div className='form-control'>
+      <div className={classes.form}>
         <label>Day & Time</label>
         <input
           type='text'
@@ -40,7 +41,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(e) => setDay(e.target.value)}
         />
       </div>
-      <div className='form-control form-control-check'>
+      <div className={classes.form2}>
         <label>Set Reminder</label>
         <input
           type='checkbox'
@@ -50,7 +51,7 @@ const AddTask = ({ onAdd }) => {
         />
       </div>
 
-      <input type='submit' value='Save Task' className='btn btn-block' />
+      <input type='submit' value='Save Task' className={classes.btn} />
     </form>
   )
 }
